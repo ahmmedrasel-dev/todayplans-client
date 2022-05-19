@@ -8,15 +8,16 @@ const Home = () => {
     e.preventDefault();
     const todoTask = {
       name: e.target.task.value,
-      description: e.target.description.value
+      description: e.target.description.value,
+      complete: 'incomplete',
     }
     const url = `http://localhost:5000/add-task`;
     try {
       const postTask = async () => {
         const response = await axios.post(url, todoTask);
+        e.target.reset()
       }
       postTask();
-
 
     }
     catch (error) {
