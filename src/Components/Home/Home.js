@@ -16,7 +16,7 @@ const Home = () => {
       complete: 'incomplete',
     }
 
-    const url = `http://localhost:5000/add-task`;
+    const url = `https://quiet-hollows-35043.herokuapp.com/add-task`;
     try {
       const postTask = async () => {
         const response = await axios.post(url, todoTask);
